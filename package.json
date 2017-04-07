@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"js-base64",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "js-base64",
+    "description": "api documentation for [js-base64 (v2.1.9)](https://github.com/dankogai/js-base64#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-js-base64.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-js-base64) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-js-base64.svg)](https://travis-ci.org/npmdoc/node-npmdoc-js-base64)",
     "devDependencies": {
-        "js-base64": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "js-base64": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-js-base64",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-js-base64",
+    "keywords": [
+        "documentation",
+        "js-base64"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_js_base64.js",
+    "name": "npmdoc-js-base64",
+    "nameAlias": "npmdoc_js_base64",
+    "nameOriginal": "npmdoc-js-base64",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-js-base64"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
