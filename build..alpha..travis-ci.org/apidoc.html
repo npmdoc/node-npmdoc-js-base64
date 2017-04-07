@@ -1,0 +1,517 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/dankogai/js-base64#readme"
+
+    >js-base64 (v2.1.9)</a>
+</h1>
+<h4>Yet another Base64 transcoder in pure-JS</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.js-base64">module js-base64</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">js-base64.</span>Base64</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.js-base64.Base64">module js-base64.Base64</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.atob">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>atob
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.btoa">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>btoa
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.btou">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>btou
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.decode">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>decode
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.encode">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>encode
+            <span class="apidocSignatureSpan">(u, urisafe)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.encodeURI">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>encodeURI
+            <span class="apidocSignatureSpan">(u)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.extendString">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>extendString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.fromBase64">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>fromBase64
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.noConflict">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>noConflict
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.toBase64">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>toBase64
+            <span class="apidocSignatureSpan">(u, urisafe)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.js-base64.Base64.utob">
+            function <span class="apidocSignatureSpan">js-base64.Base64.</span>utob
+            <span class="apidocSignatureSpan">(u)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">js-base64.Base64.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.js-base64" id="apidoc.module.js-base64">module js-base64</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.js-base64.Base64" id="apidoc.module.js-base64.Base64">module js-base64.Base64</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.atob" id="apidoc.element.js-base64.Base64.atob">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>atob
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">atob = function (a){
+    return a.replace(/[\s\S]{1,4}/g, cb_decode);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        fromCharCode((n &#x3e;&#x3e;&#x3e;  8) &#x26; 0xff),
+        fromCharCode( n         &#x26; 0xff)
+    ];
+    chars.length -= [0, 0, 2, 1][padlen];
+    return chars.join(&#x27;&#x27;);
+};
+var atob = global.atob ? function(a) {
+    return global.<span class="apidocCodeKeywordSpan">atob</span>(a);
+} : function(a){
+    return a.replace(/[\s\S]{1,4}/g, cb_decode);
+};
+var _decode = buffer ? function(a) {
+    return (a.constructor === buffer.constructor
+            ? a : new buffer(a, &#x27;base64&#x27;)).toString();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.btoa" id="apidoc.element.js-base64.Base64.btoa">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>btoa
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">btoa = function (b) {
+    return b.replace(/[\s\S]{1,3}/g, cb_encode);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        b64chars.charAt((ord &#x3e;&#x3e;&#x3e; 12) &#x26; 63),
+        padlen &#x3e;= 2 ? &#x27;=&#x27; : b64chars.charAt((ord &#x3e;&#x3e;&#x3e; 6) &#x26; 63),
+        padlen &#x3e;= 1 ? &#x27;=&#x27; : b64chars.charAt(ord &#x26; 63)
+    ];
+    return chars.join(&#x27;&#x27;);
+};
+var btoa = global.btoa ? function(b) {
+    return global.<span class="apidocCodeKeywordSpan">btoa</span>(b);
+} : function(b) {
+    return b.replace(/[\s\S]{1,3}/g, cb_encode);
+};
+var _encode = buffer ? function (u) {
+    return (u.constructor === buffer.constructor ? u : new buffer(u))
+    .toString(&#x27;base64&#x27;)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.btou" id="apidoc.element.js-base64.Base64.btou">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>btou
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">btou = function (b) {
+    return b.replace(re_btou, cb_btou);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.decode" id="apidoc.element.js-base64.Base64.decode">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>decode
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decode = function (a){
+    return _decode(
+        String(a).replace(/[-_]/g, function(m0) { return m0 == &#x27;-&#x27; ? &#x27;+&#x27; : &#x27;/&#x27; })
+            .replace(/[^A-Za-z0-9\+\/]/g, &#x27;&#x27;)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## SYNOPSIS
+
+````javascript
+Base64.encode(&#x27;dankogai&#x27;);  // ZGFua29nYWk=
+Base64.encode(&#x27;小飼弾&#x27;);    // 5bCP6aO85by+
+Base64.encodeURI(&#x27;小飼弾&#x27;); // 5bCP6aO85by-
+
+Base64.<span class="apidocCodeKeywordSpan">decode</span>(&#x27;ZGFua29nYWk=&#x27;);  // dankogai
+Base64.decode(&#x27;5bCP6aO85by+&#x27;);  // 小飼弾
+// note .decodeURI() is unnecessary since it accepts both flavors
+Base64.decode(&#x27;5bCP6aO85by-&#x27;);  // 小飼弾
+````
+
+### String Extension for ES5
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.encode" id="apidoc.element.js-base64.Base64.encode">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>encode
+        <span class="apidocSignatureSpan">(u, urisafe)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encode = function (u, urisafe) {
+    return !urisafe
+        ? _encode(String(u))
+        : _encode(String(u)).replace(/[+\/]/g, function(m0) {
+            return m0 == &#x27;+&#x27; ? &#x27;-&#x27; : &#x27;_&#x27;;
+        }).replace(/=/g, &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Base64 = require(&#x27;./base64.js&#x27;).Base64;
+````
+
+
+## SYNOPSIS
+
+````javascript
+Base64.<span class="apidocCodeKeywordSpan">encode</span>(&#x27;dankogai&#x27;);  // ZGFua29nYWk=
+Base64.encode(&#x27;小飼弾&#x27;);    // 5bCP6aO85by+
+Base64.encodeURI(&#x27;小飼弾&#x27;); // 5bCP6aO85by-
+
+Base64.decode(&#x27;ZGFua29nYWk=&#x27;);  // dankogai
+Base64.decode(&#x27;5bCP6aO85by+&#x27;);  // 小飼弾
+// note .decodeURI() is unnecessary since it accepts both flavors
+Base64.decode(&#x27;5bCP6aO85by-&#x27;);  // 小飼弾
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.encodeURI" id="apidoc.element.js-base64.Base64.encodeURI">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>encodeURI
+        <span class="apidocSignatureSpan">(u)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encodeURI = function (u) { return encode(u, true) }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## SYNOPSIS
+
+````javascript
+Base64.encode(&#x27;dankogai&#x27;);  // ZGFua29nYWk=
+Base64.encode(&#x27;小飼弾&#x27;);    // 5bCP6aO85by+
+Base64.<span class="apidocCodeKeywordSpan">encodeURI</span>(&#x27;小飼弾&#x27;); // 5bCP6aO85by-
+
+Base64.decode(&#x27;ZGFua29nYWk=&#x27;);  // dankogai
+Base64.decode(&#x27;5bCP6aO85by+&#x27;);  // 小飼弾
+// note .decodeURI() is unnecessary since it accepts both flavors
+Base64.decode(&#x27;5bCP6aO85by-&#x27;);  // 小飼弾
+````
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.extendString" id="apidoc.element.js-base64.Base64.extendString">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>extendString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendString = function () {
+    Object.defineProperty(
+        String.prototype, &#x27;fromBase64&#x27;, noEnum(function () {
+            return decode(this)
+        }));
+    Object.defineProperty(
+        String.prototype, &#x27;toBase64&#x27;, noEnum(function (urisafe) {
+            return encode(this, urisafe)
+        }));
+    Object.defineProperty(
+        String.prototype, &#x27;toBase64URI&#x27;, noEnum(function () {
+            return encode(this, true)
+        }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+````
+
+### String Extension for ES5
+
+````javascript
+if (Base64.extendString) {
+// you have to explicitly extend String.prototype
+Base64.<span class="apidocCodeKeywordSpan">extendString</span>();
+// once extended, you can do the following
+&#x27;dankogai&#x27;.toBase64();       // ZGFua29nYWk=
+&#x27;小飼弾&#x27;.toBase64();         // 5bCP6aO85by+
+&#x27;小飼弾&#x27;.toBase64(true);     // 5bCP6aO85by-
+&#x27;小飼弾&#x27;.toBase64URI();      // 5bCP6aO85by-
+&#x27;ZGFua29nYWk=&#x27;.fromBase64(); // dankogai
+&#x27;5bCP6aO85by+&#x27;.fromBase64(); // 小飼弾
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.fromBase64" id="apidoc.element.js-base64.Base64.fromBase64">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>fromBase64
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBase64 = function (a){
+    return _decode(
+        String(a).replace(/[-_]/g, function(m0) { return m0 == &#x27;-&#x27; ? &#x27;+&#x27; : &#x27;/&#x27; })
+            .replace(/[^A-Za-z0-9\+\/]/g, &#x27;&#x27;)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // you have to explicitly extend String.prototype
+    Base64.extendString();
+    // once extended, you can do the following
+    &#x27;dankogai&#x27;.toBase64();       // ZGFua29nYWk=
+    &#x27;小飼弾&#x27;.toBase64();         // 5bCP6aO85by+
+    &#x27;小飼弾&#x27;.toBase64(true);     // 5bCP6aO85by-
+    &#x27;小飼弾&#x27;.toBase64URI();      // 5bCP6aO85by-
+    &#x27;ZGFua29nYWk=&#x27;.<span class="apidocCodeKeywordSpan">fromBase64</span>(); // dankogai
+    &#x27;5bCP6aO85by+&#x27;.fromBase64(); // 小飼弾
+    &#x27;5bCP6aO85by-&#x27;.fromBase64(); // 小飼弾
+}
+````
+
+## SEE ALSO
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.noConflict" id="apidoc.element.js-base64.Base64.noConflict">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>noConflict
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">noConflict = function () {
+    var Base64 = global.Base64;
+    global.Base64 = _Base64;
+    return Base64;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.toBase64" id="apidoc.element.js-base64.Base64.toBase64">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>toBase64
+        <span class="apidocSignatureSpan">(u, urisafe)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBase64 = function (u, urisafe) {
+    return !urisafe
+        ? _encode(String(u))
+        : _encode(String(u)).replace(/[+\/]/g, function(m0) {
+            return m0 == &#x27;+&#x27; ? &#x27;-&#x27; : &#x27;_&#x27;;
+        }).replace(/=/g, &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### String Extension for ES5
+
+````javascript
+if (Base64.extendString) {
+    // you have to explicitly extend String.prototype
+    Base64.extendString();
+    // once extended, you can do the following
+    &#x27;dankogai&#x27;.<span class="apidocCodeKeywordSpan">toBase64</span>();       // ZGFua29nYWk=
+    &#x27;小飼弾&#x27;.toBase64();         // 5bCP6aO85by+
+    &#x27;小飼弾&#x27;.toBase64(true);     // 5bCP6aO85by-
+    &#x27;小飼弾&#x27;.toBase64URI();      // 5bCP6aO85by-
+    &#x27;ZGFua29nYWk=&#x27;.fromBase64(); // dankogai
+    &#x27;5bCP6aO85by+&#x27;.fromBase64(); // 小飼弾
+    &#x27;5bCP6aO85by-&#x27;.fromBase64(); // 小飼弾
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.js-base64.Base64.utob" id="apidoc.element.js-base64.Base64.utob">
+        function <span class="apidocSignatureSpan">js-base64.Base64.</span>utob
+        <span class="apidocSignatureSpan">(u)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">utob = function (u) {
+    return u.replace(re_utob, cb_utob);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
